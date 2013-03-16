@@ -1,0 +1,13 @@
+{
+    "name": "ramble/uuid-bundle",
+    "description": "Provides a binary guid type for storing guids efficiently.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Malcolm Fell",
+            "email": "malcolm@ramble.co.nz"
+        }
+    ],
+    "minimum-stability": "dev-master",
+    "require": {}
+}
