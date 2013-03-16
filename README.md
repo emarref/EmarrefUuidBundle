@@ -63,3 +63,10 @@ class MyEntity
     protected $id;
 }
 ```
+
+### Step 4: Build your entities
+
+``` bash
+php ./app/console doctrine:schema:update --force
+```
+
