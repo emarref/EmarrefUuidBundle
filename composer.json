@@ -10,6 +10,7 @@
     ],
     "minimum-stability": "dev-master",
     "require": {},
+    "target-dir": "ramble/UuidBundle",
     "autoload": {
         "psr-0": { "Ramble\\UuidBundle": "" }
     }
