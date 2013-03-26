@@ -4,6 +4,7 @@ namespace Ramble\UuidBundle\Type;
 
 use Doctrine\DBAL\Types\Type;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
+use Ramble\UuidBundle\Uuid;
 
 class BinaryGuidType extends Type
 {
@@ -25,21 +26,7 @@ class BinaryGuidType extends Type
             return $value;
         }
 
-        $value = unpack('H*', $value);
-
-        $value = array_shift($value);
-
-        $value = strrev($value);
-
-        $parts = array();
-
-        preg_match('/^([a-f0-9]{8})([a-f0-9]{4})([a-f0-9]{4})([a-f0-9]{4})([a-f0-9]{12})$/', $value, $parts);
-
-        array_shift($parts);
-
-        $value = implode('-', $parts);
-
-        return $value;
+        return Uuid\Mysql::binaryToUuid($value);
     }
 
     public function convertToDatabaseValue($value, AbstractPlatform $platform)
@@ -48,12 +35,6 @@ class BinaryGuidType extends Type
             return null;
         }
 
-        $value = str_replace('-', '', $value);
-
-        $value = strrev($value);
-
-        $value = pack('H*', $value);
-
-        return $value;
+        return Uuid\Mysql::uuidToBinary($value);
     }
 }
