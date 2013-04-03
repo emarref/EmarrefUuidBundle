@@ -35,6 +35,10 @@ class BinaryGuidType extends Type
             return null;
         }
 
+        if (!Uuid\Mysql::isUuid($value)) {
+            throw new InvalidArgumentException(sprintf('Value "%s" is not a UUID.', $value));
+        }
+
         return Uuid\Mysql::uuidToBinary($value);
     }
 }
