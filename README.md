@@ -48,6 +48,8 @@ public function registerBundles()
 
 ### Step 3: Use the type in your entity
 
+N.b. Doctrine doesn't seem to respect the length of the column, and doesn't generate a foreign key if you don't hardcode the columnDefinition.
+
 ``` php
 /**
  * @ORM\Entity
@@ -57,7 +59,7 @@ class MyEntity
 {
     /**
      * @ORM\Id
-     * @ORM\Column(type="binary_guid", length=16, name="id")
+     * @ORM\Column(type="binary_guid", columnDefinition="BINARY(16) NOT NULL", name="id")
      * @ORM\GeneratedValue(strategy="UUID")
      */
     protected $id;
