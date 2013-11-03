@@ -10,7 +10,7 @@ Add EmarrefUuidBundle in your composer.json:
 ```js
 {
     "require": {
-        "emarref/uuid-bundle": "*"
+        "emarref/uuid-bundle": "dev-master"
     },
     "repositories": [
         {
