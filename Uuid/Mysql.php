@@ -1,6 +1,6 @@
 <?php
 
-namespace Ramble\UuidBundle\Uuid;
+namespace Emarref\Bundle\UuidBundle\Uuid;
 
 /**
  * MySQL UUID format utilities

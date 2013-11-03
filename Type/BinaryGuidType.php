@@ -1,10 +1,10 @@
 <?php
 
-namespace Ramble\UuidBundle\Type;
+namespace Emarref\Bundle\UuidBundle\Type;
 
 use Doctrine\DBAL\Types\Type;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
-use Ramble\UuidBundle\Uuid;
+use Emarref\Bundle\UuidBundle\Uuid;
 
 class BinaryGuidType extends Type
 {

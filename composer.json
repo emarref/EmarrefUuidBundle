@@ -1,20 +1,19 @@
 {
-    "name": "ramble/uuid-bundle",
+    "name": "emarref/uuid-bundle",
     "description": "Provides a binary guid type for storing guids efficiently.",
     "type": "symfony-bundle",
-    "keywords": ["Binary guid", "Doctrine type"],
-    "homepage": "http://uuidbundle.ramble.co.nz/",
+    "keywords": ["guid", "uuid", "Doctrine type"],
     "license": "MIT",
     "authors": [
         {
             "name": "Malcolm Fell",
-            "email": "malcolm@ramble.co.nz"
+            "email": "emarref@gmail.com"
         }
     ],
     "minimum-stability": "dev-master",
     "require": {},
-    "target-dir": "ramble/UuidBundle",
     "autoload": {
-        "psr-0": { "Ramble\\UuidBundle": "" }
-    }
+        "psr-0": { "Emarref\\Bundle\\UuidBundle": "" }
+    },
+    "target-dir": "Emarref/Bundle/UuidBundle"
 }

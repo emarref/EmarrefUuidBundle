@@ -1,11 +1,11 @@
 <?php
 
-namespace Ramble\UuidBundle\DependencyInjection;
+namespace Emarref\Bundle\UuidBundle\DependencyInjection;
 
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
-class RambleUuidExtension extends Extension
+class EmarrefUuidExtension extends Extension
 {
     public function load(array $config, ContainerBuilder $container)
     {

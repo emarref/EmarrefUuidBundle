@@ -1,6 +1,6 @@
 <?php
 
-namespace Ramble\UuidBundle\DependencyInjection;
+namespace Emarref\Bundle\UuidBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 

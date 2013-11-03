@@ -1,21 +1,21 @@
-RambleUuidBundle
+EmarrefUuidBundle
 ================
 
 Provides a binary guid type for storing guids efficiently.
 
-### Step 1: Download RambleUuidBundle using composer
+### Step 1: Download EmarrefUuidBundle using composer
 
-Add RambleUuidBundle in your composer.json:
+Add EmarrefUuidBundle in your composer.json:
 
 ```js
 {
     "require": {
-        "ramble/uuid-bundle": "*"
+        "emarref/uuid-bundle": "*"
     },
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/ramble/RambleUuidBundle"
+            "url": "https://github.com/emarref/EmarrefUuidBundle"
         }
     ]
 }
@@ -24,10 +24,8 @@ Add RambleUuidBundle in your composer.json:
 Now tell composer to download the bundle by running the command:
 
 ``` bash
-$ php composer.phar update ramble/uuid-bundle
+$ php composer.phar update emarref/uuid-bundle
 ```
-
-Composer will install the bundle to your project's `vendor/ramble` directory.
 
 ### Step 2: Enable the bundle
 
@@ -41,7 +39,7 @@ public function registerBundles()
 {
     $bundles = array(
         // ...
-        new Ramble\UuidBundle\RambleUuidBundle(),
+        new Emarref\Bundle\UuidBundle\EmarrefUuidBundle(),
     );
 }
 ```
@@ -53,7 +51,7 @@ N.b. Doctrine doesn't seem to respect the length of the column, and doesn't gene
 ``` php
 /**
  * @ORM\Entity
- * @ORM\Table(name="my_entity")
+ * @ORM\Table()
  */
 class MyEntity
 {
